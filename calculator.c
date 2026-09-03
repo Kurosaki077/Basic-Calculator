@@ -29,13 +29,30 @@ int main() {
 	printf("4. Divide\n");
 
 	printf("Choose an operation: ");
-	scanf("%d", &operation);
+	
+	if(scanf("%d", &operation) != 1){
+		printf("Invalid input\n");
+		return 1;
+	}
+
+	if(operation < 1 || operation > 4){
+		printf("Invalid operation\n");
+		return 1;
+	}
 
 	printf("Enter first number: ");
-	scanf("%lf", &num1);
+	
+	if(scanf("%lf", &num1) != 1){
+		printf("Invalid number\n");
+		return 1;
+	}
 
 	printf("Enter second number: ");
-	scanf("%lf", &num2);
+	
+	if(scanf("%lf", &num2) != 1){
+		printf("Invalid number\n");
+		return 1;
+	}
 
 	switch(operation){
 		case 1:
