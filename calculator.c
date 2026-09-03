@@ -12,6 +12,15 @@ double multiply(double num1, double num2){
 	return num1 * num2;
 }
 
+double divide(double num1, double num2){
+	if (num2 == 0){
+		printf("Cannot divide by zero\n");
+		return 0;
+	}
+
+	return num1 / num2;
+}
+ 
 int main() {
  	double answer;
 
@@ -22,7 +31,10 @@ int main() {
 	printf("Subtraction: %.2f\n", answer);
 
 	answer = multiply(6.3, 8.9);
-	printf("Multiplication: &.2f\n", answer);
+	printf("Multiplication: %.2f\n", answer);
+
+	answer = divide(8.4, 2.2);
+	printf("Division: %.2f\n", answer);
 
 	return 0;
  }
